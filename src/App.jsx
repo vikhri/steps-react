@@ -3,7 +3,7 @@ import {useState} from "react";
 const messages = [
   "Learn",
   "Apply for job",
-  "Invest your new income",
+  "Invest your new inncome",
 ];
 
 function App() {
@@ -34,12 +34,12 @@ function handlePrevious() {
         <p className='message'> Step {step}: {messages[step - 1]}</p>
         <div className='buttons'>
           <button
-            style={{backgroundColor: "#7950f2", color: '#FFFFFF'}}
+            style={step === 1 ? {backgroundColor: "#7950f299", color: "#ffffff", cursor: "none"} : {backgroundColor: "#7950f2", color: '#FFFFFF'}}
             onClick={ handlePrevious }
 
           >Prev</button>
           <button
-            style={{backgroundColor: "#7950f2", color: '#FFFFFF'}}
+            style={ step === 3 ? {backgroundColor: "#7950f299", color: "#ffffff", cursor: "none"} : {backgroundColor: "#7950f2", color: '#FFFFFF'}}
             onClick={handleNext}>
               Next </button>
         </div>
