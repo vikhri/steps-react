@@ -17,15 +17,6 @@ function handlePrevious() {
     if (step < 3) setStep((s) => s + 1)
   }
 
-// function Button({bgColor}) {
-//   return
-//   <button
-//     style={ step === 3 ? {backgroundColor: "#7950f299", color: "#ffffff", cursor: "none"} : {backgroundColor: "#7950f2", color: '#FFFFFF'}}
-//     onClick={handleNext}>
-//     Next </button>
-// }
-
-
   return (
     <>
       <button className='close' onClick={() => setIsOpen((is) => !is)}>&times;
@@ -38,18 +29,19 @@ function handlePrevious() {
           <div className={step >= 2 ? 'active' : ''}>2</div>
           <div className={step >= 3 ? 'active' : ''}>3</div>
         </div>
-
         <p className='message'> Step {step}: {messages[step - 1]}</p>
         <div className='buttons'>
           <button
-            style={{backgroundColor: "#7950f2", color: '#FFFFFF'}}
-            onClick={ handlePrevious }
-
-          >Prev</button>
+            onClick={handlePrevious}
+            className={step === 1 ? 'button inactive' : 'button'}
+          > Previous </button>
           <button
-            style={ {backgroundColor: "#7950f2", color: '#FFFFFF'}}
-            onClick={handleNext}>
-              Next </button>
+            onClick={handleNext}
+            className={step === 3 ? 'button inactive' : 'button'}
+          >
+            Next
+          </button>
+
         </div>
       </div> )}
     </>
