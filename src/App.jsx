@@ -17,6 +17,14 @@ function handlePrevious() {
     if (step < 3) setStep((s) => s + 1)
   }
 
+// function Button({bgColor}) {
+//   return
+//   <button
+//     style={ step === 3 ? {backgroundColor: "#7950f299", color: "#ffffff", cursor: "none"} : {backgroundColor: "#7950f2", color: '#FFFFFF'}}
+//     onClick={handleNext}>
+//     Next </button>
+// }
+
 
   return (
     <>
@@ -34,12 +42,12 @@ function handlePrevious() {
         <p className='message'> Step {step}: {messages[step - 1]}</p>
         <div className='buttons'>
           <button
-            style={step === 1 ? {backgroundColor: "#7950f299", color: "#ffffff", cursor: "none"} : {backgroundColor: "#7950f2", color: '#FFFFFF'}}
+            style={{backgroundColor: "#7950f2", color: '#FFFFFF'}}
             onClick={ handlePrevious }
 
           >Prev</button>
           <button
-            style={ step === 3 ? {backgroundColor: "#7950f299", color: "#ffffff", cursor: "none"} : {backgroundColor: "#7950f2", color: '#FFFFFF'}}
+            style={ {backgroundColor: "#7950f2", color: '#FFFFFF'}}
             onClick={handleNext}>
               Next </button>
         </div>
